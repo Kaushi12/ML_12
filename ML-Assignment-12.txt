@@ -1,0 +1,58 @@
+1)Prior probability shows the likelihood of an outcome in a given dataset. For example, in the mortgage case, P(Y) is the default rate on a home mortgage, which is 2%. P(Y|X) is called the conditional probability, which provides the probability of an outcome given the evidence, that is, when the value of X is known.
+
+2)Posterior probability is a revised probability that takes into account new available information. For example, let there be two urns, urn A having 5 black balls and 10 red balls and urn B having 10 black balls and 5 red balls. Now if an urn is selected at random, the probability that urn A is chosen is 0.5.
+
+3)Likelihood refers to how well a sample provides support for particular values of a parameter in a model.Suppose we have a coin that is assumed to be fair. If we flip the coin one time, the probability that it will land on heads is 0.5.
+
+Now suppose we flip the coin 100 times and it only lands on heads 17 times. We would say that the likelihood that the coin is fair is quite low. If the coin was actually fair, we would expect it to land on heads much more often.
+When calculating the probability of a coin landing on heads, we simply assume that P(heads) = 0.5 on a given toss.
+
+However, when calculating the likelihood we’re trying to determine if the model parameter (p = 0.5) is actually correctly specified.
+
+In the example above, a coin landing on heads only 17 out of 100 times makes us highly suspicious that the truly probability of the coin landing on heads on a given toss is actually p = 0.5.
+
+3)Naive Bayes is called naive because it assumes that each input variable is independent. This is a strong assumption and unrealistic for real data; however, the technique is very effective on a large range of complex problems.A naive Bayes classifier assumes that the presence (or absence) of a particular feature of a class is unrelated to the presence (or absence) of any other feature, given the class variable. Basically, it's "naive" because it makes assumptions that may or may not turn out to be correct.
+
+Bayes theorem is used to find conditional probabilities.
+The conditional probability of an event is a likelihood obtained with the additional information that some other event has previously occurred.
+P(X|Y) is the conditional probability of event X occurring for the event Y which has already occurred.
+P(X|Y)=P(XandY)/P(A)
+An initial probability is called as apriori probability which we get before any additional information is obtained.
+The probability is called as a posterior probability value which we get or revised after any additional information is obtained.
+
+4)Bayes Optimal Classifier is a probabilistic model that finds the most probable prediction using the training data and space of hypotheses to make a prediction for a new data instance.
+
+5)Each observed training example can incrementally decrease or increase the estimated
+probability that a hypothesis is correct.
+– This provides a more flexible approach to learning than algorithms that completely
+eliminate a hypothesis if it is found to be inconsistent with any single example.
+• Prior knowledge can be combined with observed data to determine the final
+probability of a hypothesis. In Bayesian learning, prior knowledge is provided by
+asserting
+– a prior probability for each candidate hypothesis, and
+– a probability distribution over observed data for each possible hypothesis.
+
+6)Consistent Learners. • A learner L using a hypothesis H and training data D is said to be a consistent learner if it always outputs a hypothesis with zero error on D whenever H contains such a hypothesis. • By definition, a consistent learner must produce a hypothesis in the version space for H given D.
+
+7)Advantages of Naive Bayes Classifier
+It is simple and easy to implement.
+It doesn't require as much training data.
+It handles both continuous and discrete data.
+It is highly scalable with the number of predictors and data points.
+It is fast and can be used to make real-time predictions.
+
+8)Disadvantages of Using Naive Bayes Classifier
+Conditional Independence Assumption does not always hold. ...
+Zero probability problem : When we encounter words in the test data for a particular class that are not present in the training data, we might end up with zero class probabilities.
+
+9)Text Analysis is a major application field for machine learning algorithms. However the raw data, a sequence of symbols (i.e. strings) cannot be fed directly to the algorithms themselves as most of them expect numerical feature vectors with a fixed size rather than the raw text documents with variable length.
+
+In order to address this, scikit-learn provides utilities for the most common ways to extract numerical features from text content, namely:
+
+tokenizing strings and giving an integer id for each possible token, for instance by using white-spaces and punctuation as token separators.
+counting the occurrences of tokens in each document.
+In this scheme, features and samples are defined as follows:
+
+each individual token occurrence frequency is treated as a feature.
+the vector of all the token frequencies for a given document is considered a multivariate sample.
+
